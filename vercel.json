@@ -1,0 +1,9 @@
+{
+  "redirects": [
+    {
+      "source": "/complete_guide.html",
+      "destination": "/index.html",
+      "permanent": true
+    }
+  ]
+}
