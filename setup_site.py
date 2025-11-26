@@ -1,0 +1,139 @@
+#!/usr/bin/env python3
+"""
+Site Setup Script
+Run this first to configure your marketing site
+"""
+
+import os
+
+def setup_site():
+    """
+    Generates required HTML files for the marketing suite
+    """
+    print("🚀 Setting up Marketing Automation Suite...")
+    print("📝 Generating configuration files...")
+    
+    # Create the Y2K page
+    y2k_html = """<!DOCTYPE html>
+<html>
+<head>
+    <title>🎉 Y2K PARTY 🎉</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            background: linear-gradient(45deg, #ff00ff, #00ffff, #ffff00, #ff00ff);
+            background-size: 400% 400%;
+            animation: gradient 3s ease infinite;
+            overflow: hidden;
+            font-family: 'Comic Sans MS', cursive;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+        
+        @keyframes gradient {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        
+        .container {
+            text-align: center;
+            animation: spin 4s linear infinite;
+        }
+        
+        @keyframes spin {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+        
+        h1 {
+            font-size: 8rem;
+            color: white;
+            text-shadow: 0 0 20px #ff00ff, 0 0 40px #00ffff, 0 0 60px #ffff00;
+            margin-bottom: 2rem;
+            animation: pulse 1s ease-in-out infinite;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+        }
+        
+        .message {
+            font-size: 3rem;
+            color: #ffff00;
+            text-shadow: 3px 3px 0 #ff00ff, 6px 6px 0 #00ffff;
+            font-weight: bold;
+        }
+        
+        .firework {
+            position: absolute;
+            width: 4px;
+            height: 4px;
+            border-radius: 50%;
+            animation: firework 1s ease-out infinite;
+        }
+        
+        @keyframes firework {
+            0% { transform: translate(0, 0); opacity: 1; }
+            100% { transform: translate(var(--x), var(--y)); opacity: 0; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Y2K</h1>
+        <div class="message">YOU THOUGHT! 🎆</div>
+    </div>
+    
+    <script>
+        for(let i = 0; i < 50; i++) {
+            setTimeout(() => createFirework(), i * 100);
+        }
+        
+        function createFirework() {
+            const colors = ['#ff00ff', '#00ffff', '#ffff00', '#ff0000', '#00ff00'];
+            const x = Math.random() * window.innerWidth;
+            const y = Math.random() * window.innerHeight;
+            
+            for(let i = 0; i < 20; i++) {
+                const firework = document.createElement('div');
+                firework.className = 'firework';
+                firework.style.left = x + 'px';
+                firework.style.top = y + 'px';
+                firework.style.background = colors[Math.floor(Math.random() * colors.length)];
+                
+                const angle = (Math.PI * 2 * i) / 20;
+                const velocity = 100 + Math.random() * 100;
+                firework.style.setProperty('--x', Math.cos(angle) * velocity + 'px');
+                firework.style.setProperty('--y', Math.sin(angle) * velocity + 'px');
+                
+                document.body.appendChild(firework);
+                setTimeout(() => firework.remove(), 1000);
+            }
+        }
+        
+        setInterval(createFirework, 500);
+    </script>
+</body>
+</html>"""
+    
+    with open('you_thought.html', 'w') as f:
+        f.write(y2k_html)
+    
+    print("✅ Site setup complete!")
+    print("📄 Generated: you_thought.html")
+    print("\n🎯 Next steps:")
+    print("   1. Open landing-page.html in your browser")
+    print("   2. Test the contact form")
+    print("   3. Run other automation scripts as needed")
+    print("\n💡 Tip: Open you_thought.html to preview the success page!")
+
+if __name__ == "__main__":
+    print("=" * 60)
+    print("MARKETING AUTOMATION SUITE - SETUP")
+    print("=" * 60)
+    setup_site()
