@@ -2,6 +2,7 @@
 <html>
 <head>
     <title>🎉 Y2K PARTY 🎉</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         
@@ -15,6 +16,7 @@
             align-items: center;
             justify-content: center;
             height: 100vh;
+            padding: 20px;
         }
         
         @keyframes gradient {
@@ -26,6 +28,7 @@
         .container {
             text-align: center;
             animation: spin 4s linear infinite;
+            max-width: 90vw;
         }
         
         @keyframes spin {
@@ -34,10 +37,10 @@
         }
         
         h1 {
-            font-size: 8rem;
+            font-size: clamp(3rem, 15vw, 8rem);
             color: white;
             text-shadow: 0 0 20px #ff00ff, 0 0 40px #00ffff, 0 0 60px #ffff00;
-            margin-bottom: 2rem;
+            margin-bottom: 1rem;
             animation: pulse 1s ease-in-out infinite;
         }
         
@@ -47,10 +50,11 @@
         }
         
         .message {
-            font-size: 3rem;
+            font-size: clamp(1.5rem, 8vw, 3rem);
             color: #ffff00;
-            text-shadow: 3px 3px 0 #ff00ff, 6px 6px 0 #00ffff;
+            text-shadow: 2px 2px 0 #ff00ff, 4px 4px 0 #00ffff;
             font-weight: bold;
+            word-wrap: break-word;
         }
         
         .firework {
@@ -64,6 +68,21 @@
         @keyframes firework {
             0% { transform: translate(0, 0); opacity: 1; }
             100% { transform: translate(var(--x), var(--y)); opacity: 0; }
+        }
+        
+        /* Mobile optimizations */
+        @media (max-width: 768px) {
+            .container {
+                animation: spin 6s linear infinite; /* Slower on mobile */
+            }
+            
+            h1 {
+                text-shadow: 0 0 10px #ff00ff, 0 0 20px #00ffff, 0 0 30px #ffff00;
+            }
+            
+            .message {
+                text-shadow: 1px 1px 0 #ff00ff, 2px 2px 0 #00ffff;
+            }
         }
     </style>
 </head>
