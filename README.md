@@ -12,6 +12,11 @@ A collection of Python scripts for automating marketing workflows, lead generati
 2. Install dependencies: `pip install -r requirements.txt` (if present)
 3. Run each script individually to verify functionality
 
+#### Site Setup (Run First)
+```bash
+python setup_site.py
+```
+Configures HTML pages and generates required assets. Run this before testing the landing page.
 ### Available Scripts
 
 #### Email Automation
