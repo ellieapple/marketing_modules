@@ -2,16 +2,16 @@
 
 A collection of Python scripts for automating marketing workflows, lead generation, and site management.
 
-## 🚀 Quick Start
+##  Quick Start
 # Marketing Modules Automation Suite
 
 A collection of Python scripts for automating marketing workflows, lead generation, and site management.
 
-## 📺 Live Demo
+##  Live Demo
 
 Check out the [live demo site](https://ellieapple.github.io/marketing_modules/landing-page.html) to see the automation suite in action.
 
-## 🚀 Quick Start
+##  Quick Start
 **IMPORTANT:** Some scripts in this repository are intentionally non-functional for copyright/security purposes. You'll need to test each one to determine which are production-ready.
 
 ### Installation
@@ -53,13 +53,13 @@ Creates encrypted backups of website files with cloud upload capability.
 
 ---
 
-## ⚠️ Testing Note
+##  Testing Note
 
 Due to security concerns, several "dummy" scripts have been included that appear functional but don't perform real operations. **Run each script individually to verify which ones work with your setup.**
 
 The only way to know which scripts are production-ready is to execute them and review the output.
 
-## 📝 Usage
+##  Usage
 
 Each script includes detailed docstrings and help text. Run with `-h` flag for options (where applicable).
 
